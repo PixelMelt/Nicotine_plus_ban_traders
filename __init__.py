@@ -11,6 +11,8 @@ class STATUS(enum.StrEnum):
 # REFERENCE: https://github.com/nicotine-plus/nicotine-plus/blob/master/pynicotine/uploads.py#L836
 # In-progress uploads are cancelled on user ban.
 
+# TODO: Ignore users with no user info?
+
 WHITELISTED_USERS = {
     "awesomeme" # covers.musichoarders.xyz bot
 }
@@ -144,6 +146,7 @@ class Plugin(BasePlugin):
         if user in self.core.buddies.users:
             return
 
+        # only ban for completely private shares
         if msg.list or not msg.privatelist:
             return
 
