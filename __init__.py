@@ -24,8 +24,8 @@ class Plugin(BasePlugin):
         self.settings = {
             "message": "You seem to have a lot of private folders, please message to ask for an unban if you are not a trader.",
             "open_private_chat": True,
-            "ban_in_searches": True,
-            "message_in_searches": False
+            "ban_in_searches": False,
+            "message_in_searches": True
         }
 
         self.metasettings = {
@@ -38,11 +38,11 @@ class Plugin(BasePlugin):
                 "type": "bool"
             },
             "ban_in_searches": {
-                "description": "Autoban users with fully private shares in searches",
+                "description": "Ban users with fully private shares in searches",
                 "type": "bool"
             },
             "message_in_searches": {
-                "description": "Send a message to users banned via searches (may cause rate-limiting)",
+                "description": "Send a message to users banned via searches",
                 "type": "bool"
             }
         }
