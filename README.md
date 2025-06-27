@@ -5,7 +5,7 @@
 This plugin:
 - Bans users whose share list mostly consist of private folders (ie: traders)
 - Sends a custom message to them
-- Can also ban the users of private shares that appear in search results
+- Can also ban the users of private shares that appear in search results (causes lots of false positives)
 
 If you have suggestions or ideas, open a pull request or issue.
 
