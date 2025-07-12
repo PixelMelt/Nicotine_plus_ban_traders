@@ -1,4 +1,4 @@
 Version="2025-06-18"
-Authors=['sbzgen']
-Name="Trader beamer"
-Description="Detects when traders are downloading, bans them, and sends them a message. Can also ban via searches"
+Authors=['sbzgen','pixelmelt']
+Name="Trader Banner"
+Description="Detects music traders by analyzing file shares, bans users with predominantly private music files. Configurable thresholds and messaging."
