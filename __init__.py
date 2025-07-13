@@ -183,7 +183,7 @@ class Plugin(BasePlugin):
         private_ratio = private_music_count / total_files
         threshold_ratio = self.settings["private_threshold"] / 100.0
 
-        if public_music_count >= MINIMUM_PUBLIC_FILES and private_ratio < threshold_ratio:
+        if public_music_count >= MINIMUM_PUBLIC_FILES or private_ratio < threshold_ratio:
             if self.settings["debug_logging"]:
                 self.log(
                     f"user '{user}' has some private music files but less than {self.settings['private_threshold']}%. most likely not a trader"
